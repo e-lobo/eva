@@ -7,17 +7,17 @@
 - No fully connected layer
 
 ## Network
-![img.png](img.png)
-![img_1.png](img_1.png)
+![img.png](images/img.png)
+![img_1.png](images/img_1.png)
 
 - Network Params
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
   
 ## Epochs 1-10
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)
 
 ## Epochs 11-19
-![img_4.png](img_4.png)
+![img_4.png](images/img_4.png)
 
 ## Conclusion
 - At epoch 19 we observe a 99.41% accuracy.
