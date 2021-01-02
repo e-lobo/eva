@@ -20,9 +20,19 @@
 
 ## Target:
 
+1.   Addition of Image Augmentation (Random Rotation).
+2.   Addition of GAP (Global Average Pooling) layer to the network.
+
 ## Results:
 
-## Conclusion
+
+1.   Parameters: 10,308
+2.   Best Training Accuracy: 99.26%
+3.   Best Test Accuracy: 99.31%
+
+## Conclusion 
+
+*   Model is over-fitting
 
 # [Step 4](step_4/README.md) :
 
