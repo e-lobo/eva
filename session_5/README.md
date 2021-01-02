@@ -23,9 +23,18 @@
 
 ## Target:
 
+1.   Lower params < 10,000
+
 ## Results:
 
-## Conclusion
+1.   Parameters: 6,168
+2.   Best Training Accuracy: 99.05%
+3.   Best Test Accuracy: 99.01%
+
+## Conclusion 
+
+*   Model is under-fitting
+*   Less than 10k params used.
 
 # [Step 3](step_3/README.md) :
 
