@@ -1,4 +1,4 @@
-# Session 5 Assignment - Step 4
+# Session 5 Assignment - [Step 4](Session_5_Assignment_step_4.ipynb)
 
 ### Constraints:
 - Achieve 99.4% validation accuracy

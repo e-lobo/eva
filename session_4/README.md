@@ -1,4 +1,4 @@
-# Session 4 Assignment
+# Session 4 [Assignment](Session_4_Assignment.ipynb)
 
 ### Constraints:
 - Achieve 99.4% validation accuracy

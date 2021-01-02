@@ -1,4 +1,4 @@
-## Session 3x Assignment
+## Session 3x [Assignment](Session_3x_Assignment.ipynb)
 
 # Network
 

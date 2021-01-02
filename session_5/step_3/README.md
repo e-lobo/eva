@@ -1,4 +1,4 @@
-# Session 5 Assignment - Step 3
+# Session 5 Assignment - [Step 3](Session_5_Assignment_step_3.ipynb)
 
 ## Network
 ![img_3.png](images/img_3.png)
