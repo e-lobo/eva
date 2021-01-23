@@ -1,20 +1,33 @@
 import torch
 import torchvision
+
+from session_7.model import Net
 import torchvision.transforms as transforms
 
-transform = transforms.Compose(
-    [transforms.ToTensor(),
-     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
-train_set = torchvision.datasets.CIFAR10(root='./data', train=True,
-                                         download=True, transform=transform)
-train_loader = torch.utils.data.DataLoader(train_set, batch_size=4,
-                                           shuffle=True, num_workers=2)
+class Loader(object):
+    def __init__(self, data_mean, data_std_dev):
+        super(Loader, self).__init__()
+        self.cuda = torch.cuda.is_available()
+        self.device = torch.device("cuda" if self.cuda else "cpu")
 
-test_set = torchvision.datasets.CIFAR10(root='./data', train=False,
-                                        download=True, transform=transform)
-test_loader = torch.utils.data.DataLoader(test_set, batch_size=4,
-                                          shuffle=False, num_workers=2)
+        self.model = Net().to(self.device)
 
-classes = ('plane', 'car', 'bird', 'cat',
-           'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+        transform = transforms.Compose(
+            [transforms.ToTensor(),
+             transforms.Normalize(data_mean, data_std_dev)])
+
+        train_set = torchvision.datasets.CIFAR10(root='./data', train=True,
+                                                 download=True,
+                                                 transform=transform)
+        self.train_loader = torch.utils.data.DataLoader(train_set,
+                                                        batch_size=64,
+                                                        shuffle=True,
+                                                        num_workers=4)
+
+        test_set = torchvision.datasets.CIFAR10(root='./data', train=False,
+                                                download=True,
+                                                transform=transform)
+        self.test_loader = torch.utils.data.DataLoader(test_set, batch_size=64,
+                                                       shuffle=False,
+                                                       num_workers=4)
