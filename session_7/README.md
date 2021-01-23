@@ -11,7 +11,7 @@
 
 ## Network [File](model.py)
 
-- Network Params
+## Network Params
   ![img.png](images/img.png)
   ![img_1.png](images/img_1.png)
 
