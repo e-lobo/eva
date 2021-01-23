@@ -5,8 +5,8 @@ import torch.nn.functional as F
 
 class TestCifar10(object):
     def __init__(self, device, model, test_loader):
-        self.test_acc = None
-        self.test_losses = None
+        self.test_acc = []
+        self.test_losses = []
         self.device = device
         self.test_loader = test_loader
         self.model = model

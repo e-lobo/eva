@@ -1,7 +1,7 @@
 import torch
 import torchvision
 
-from session_7.model import Net
+from model import Net
 import torchvision.transforms as transforms
 
 
