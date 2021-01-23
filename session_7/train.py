@@ -11,7 +11,7 @@ class TrainCifar10(object):
         self.train_acc = []
         self.train_losses = []
 
-    def train(self, limit, learning_rate=0.01, momentum=0.9):
+    def train(self, limit, test_cifar, learning_rate=0.01, momentum=0.9):
         optimizer = optim.SGD(self.model.parameters(), lr=learning_rate,
                               momentum=momentum)
 
@@ -21,7 +21,7 @@ class TrainCifar10(object):
             correct = 0
             processed = 0
 
-            print("EPOCH:", epoch)
+            print("EPOCH:", epoch+1)
 
             for batch_idx, (data, labels) in enumerate(p_bar):
                 data, labels = data.to(self.device), labels.to(self.device)
@@ -51,3 +51,4 @@ class TrainCifar10(object):
                 p_bar.set_description(
                     desc=f'Loss={loss.item()} Batch_id={batch_idx} Accuracy={100 * correct / processed:0.2f}')
                 self.train_acc.append(100 * correct / processed)
+            test_cifar.test()
