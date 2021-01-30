@@ -5,12 +5,12 @@ import torchvision.transforms as transforms
 
 
 class Loader(object):
-    def __init__(self, model, data_mean, data_std_dev):
+    def __init__(self, net, data_mean, data_std_dev):
         super(Loader, self).__init__()
         self.cuda = torch.cuda.is_available()
         self.device = torch.device("cuda" if self.cuda else "cpu")
 
-        self.model = model().to(self.device)
+        self.model = net().to(self.device)
 
         transform = transforms.Compose(
             [transforms.ToTensor(),
