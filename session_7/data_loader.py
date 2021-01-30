@@ -1,19 +1,16 @@
 import torch
 import torchvision
 
-
 import torchvision.transforms as transforms
-
-from session_7.model import Net
 
 
 class Loader(object):
-    def __init__(self, data_mean, data_std_dev):
+    def __init__(self, model, data_mean, data_std_dev):
         super(Loader, self).__init__()
         self.cuda = torch.cuda.is_available()
         self.device = torch.device("cuda" if self.cuda else "cpu")
 
-        self.model = Net().to(self.device)
+        self.model = model().to(self.device)
 
         transform = transforms.Compose(
             [transforms.ToTensor(),
