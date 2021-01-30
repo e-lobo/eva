@@ -1,8 +1,10 @@
 import torch
 import torchvision
 
-from model import Net
+
 import torchvision.transforms as transforms
+
+from session_7.model import Net
 
 
 class Loader(object):
